@@ -4,8 +4,40 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {
-      "urlFilter": "youtube.com",
+      "urlFilter": "doubleclick.net",
       "resourceTypes": ["script", "image", "xmlhttprequest", "sub_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "aliexpress.com",
+      "resourceTypes": ["main_frame", "sub_frame"],
+      "excludedInitiatorDomains": ["google.com"],
+      "domainType": "thirdParty"
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "temu.com",
+      "resourceTypes": ["main_frame", "sub_frame"],
+      "excludedInitiatorDomains": ["google.com"],
+      "domainType": "thirdParty"
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "regexFilter": "^https?://[^/]*(game|casino|bet)[^/]*|[?&](aff_click|offer_id|nx_source)=",
+      "resourceTypes": ["main_frame"],
+      "domainType": "thirdParty"
     }
   }
 ]
